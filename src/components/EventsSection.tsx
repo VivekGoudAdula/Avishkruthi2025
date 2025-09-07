@@ -53,36 +53,36 @@ export const EventsSection: React.FC = () => {
   };
 
   return (
-    <section id="events" className="py-20 px-4 bg-slate-900 relative overflow-hidden">
+    <section id="events" className="py-16 sm:py-20 px-4 sm:px-6 bg-slate-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-cyan-500/20 rounded-full blur-2xl sm:blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-purple-500/20 rounded-full blur-2xl sm:blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-4">
+      <div className="max-w-7xl mx-auto relative z-10 pt-16 sm:pt-20">
+        <div className="text-center mb-10 sm:mb-16 px-2">
+          <h2 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-3 sm:mb-4">
             EVENTS
           </h2>
-          <p className="text-xl text-gray-300 font-rajdhani">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 font-rajdhani max-w-3xl mx-auto">
             Participate in exciting competitions and showcase your skills
           </p>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-12 bg-slate-800 border border-slate-700">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full sticky top-16 sm:top-20 z-20 bg-slate-900 pt-2 pb-4 -mt-2">
+          <TabsList className="grid w-full grid-cols-2 bg-slate-800 border border-slate-700">
             <TabsTrigger 
               value="technical" 
-              className="font-rajdhani text-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-600 data-[state=active]:text-white"
+              className="font-rajdhani text-sm sm:text-base md:text-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-600 data-[state=active]:text-white py-2 sm:py-3"
             >
-              Technical Events ({technicalEvents.length})
+              <span className="truncate">Technical ({technicalEvents.length})</span>
             </TabsTrigger>
             <TabsTrigger 
               value="non-technical"
-              className="font-rajdhani text-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-600 data-[state=active]:text-white"
+              className="font-rajdhani text-sm sm:text-base md:text-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-600 data-[state=active]:text-white py-2 sm:py-3"
             >
-              Non-Technical Events ({nonTechnicalEvents.length})
+              <span className="truncate">Non-Tech ({nonTechnicalEvents.length})</span>
             </TabsTrigger>
           </TabsList>
 
