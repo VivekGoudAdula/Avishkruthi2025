@@ -65,22 +65,6 @@ export const ClubsSection: React.FC = () => {
             </Card>
           ))}
         </div>
-
-        {/* Club Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center glass-card p-6 rounded-lg">
-            <div className="text-4xl font-bold font-orbitron text-cyan-400 mb-2">8</div>
-            <div className="text-gray-300 font-rajdhani">Active Clubs</div>
-          </div>
-          <div className="text-center glass-card p-6 rounded-lg">
-            <div className="text-4xl font-bold font-orbitron text-purple-400 mb-2">500+</div>
-            <div className="text-gray-300 font-rajdhani">Club Members</div>
-          </div>
-          <div className="text-center glass-card p-6 rounded-lg">
-            <div className="text-4xl font-bold font-orbitron text-green-400 mb-2">26</div>
-            <div className="text-gray-300 font-rajdhani">Total Events</div>
-          </div>
-        </div>
       </div>
     </section>
   );

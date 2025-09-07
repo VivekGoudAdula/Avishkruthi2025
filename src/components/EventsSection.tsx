@@ -2,54 +2,43 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ExternalLink, Code, Users, Trophy } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface Event {
   name: string;
   description: string;
   icon?: React.ReactNode;
+  registrationLink?: string;
 }
 
-const technicalEvents: Event[] = [
-  { name: 'Buildthon', description: 'Build innovative solutions in 48 hours. Showcase your development skills and creativity.', icon: <Code className="w-5 h-5" /> },
-  { name: 'Code Arena', description: 'Competitive programming challenge. Test your algorithmic problem-solving skills.', icon: <Trophy className="w-5 h-5" /> },
-  { name: '2D Code Battle', description: 'QR code based technical treasure hunt. Decode, solve, and advance through levels.', icon: <Code className="w-5 h-5" /> },
-  { name: 'Paper Presentation', description: 'Present your research and technical papers. Share innovative ideas with experts.', icon: <Users className="w-5 h-5" /> },
-  { name: 'Project Presentation', description: 'Showcase your technical projects. Demonstrate real-world applications and solutions.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'Poster Presentation', description: 'Visual representation of technical concepts. Design compelling research posters.', icon: <Users className="w-5 h-5" /> },
-  { name: 'Venture Verse', description: 'Startup pitch competition. Present your business ideas and entrepreneurial vision.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'Case Crackdown', description: 'Business case study analysis. Solve real-world business challenges strategically.', icon: <Code className="w-5 h-5" /> },
-  { name: 'Datathon', description: 'Data science competition. Analyze datasets and build predictive models.', icon: <Code className="w-5 h-5" /> },
-  { name: 'Git/Docker WS', description: 'Hands-on workshop on version control and containerization technologies.', icon: <Users className="w-5 h-5" /> },
-  { name: 'Git/Docker Competition', description: 'Test your DevOps skills in version control and container orchestration.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'Smart Contract Sprint', description: 'Blockchain development challenge. Create decentralized applications and smart contracts.', icon: <Code className="w-5 h-5" /> },
-  { name: 'AlgoVision', description: 'Algorithm visualization and implementation challenge. Make complex algorithms understandable.', icon: <Code className="w-5 h-5" /> },
-  { name: 'Capture the Flag', description: 'Cybersecurity competition. Find vulnerabilities and secure systems from attacks.', icon: <Trophy className="w-5 h-5" /> }
-];
-
-const nonTechnicalEvents: Event[] = [
-  { name: 'AU Shark Tank', description: 'Pitch your business ideas to investor panel. Secure funding for your startup vision.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'Creative Clash', description: 'Unleash your creativity in various artistic challenges. Design, create, and impress.', icon: <Users className="w-5 h-5" /> },
-  { name: 'Meme Mania', description: 'Create viral-worthy memes. Show your humor and internet culture knowledge.', icon: <Users className="w-5 h-5" /> },
-  { name: 'E-Sports', description: 'Competitive gaming tournaments. Battle in popular games and win exciting prizes.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'Biz Whiz Quiz', description: 'Business knowledge quiz competition. Test your understanding of corporate world.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'HR Face Off', description: 'Human resources simulation challenge. Handle workplace scenarios and conflicts.', icon: <Users className="w-5 h-5" /> },
-  { name: 'Money Moves Challenge', description: 'Financial literacy and investment strategy competition. Make smart money decisions.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'Sell it in Seconds', description: 'Quick sales pitch challenge. Convince customers in minimal time with maximum impact.', icon: <Users className="w-5 h-5" /> },
-  { name: "Eagle's Eye", description: 'Observation and detective skills challenge. Find hidden clues and solve mysteries.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'War of Words', description: 'Debate and public speaking competition. Argue your point with eloquence and logic.', icon: <Users className="w-5 h-5" /> },
-  { name: 'Strategy Masters', description: 'Strategic thinking and planning competition. Outsmart opponents with tactical brilliance.', icon: <Trophy className="w-5 h-5" /> },
-  { name: 'Bargain Bench', description: 'Negotiation skills challenge. Get the best deals through persuasion and strategy.', icon: <Users className="w-5 h-5" /> }
+const events: Event[] = [
+  { 
+    name: 'Build-a-thon', 
+    description: 'A Web Development hackathon where teams compete to design and build functional, creative, and user-friendly web applications around real-world themes. Participants will code using modern web technologies, showcase their projects, and present live demos to judges. Bonus points for innovation, UI/UX, and responsiveness.',
+    registrationLink: 'https://forms.gle/Gbm4Hh4Jdr5HKee3A'
+  },
+  {
+    name: 'Code Arena',
+    description: 'Unleash your creativity and coding prowess at our Mini Hackathon! Whether you\'re a beginner or a seasoned developer, this event is the perfect platform to collaborate, innovate, and build prototypes in a competitive yet supportive environment. Form teams, brainstorm unique game ideas, and bring them to life using cutting-edge tools and technologies. Stand a chance to win exciting prizes and gain recognition from industry experts. Push the boundaries of imagination, and let your code tell a story!',
+    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
+  },
+  {
+    name: 'Code Battle',
+    description: 'Dive into the world of game development with our hands-on Python Game Development Workshop using Pygame! Learn the fundamentals of creating a simple 2D game from scratch. This event is ideal for beginners and enthusiasts eager to explore programming, animation, and interactivity. Get guided through game mechanics, graphics rendering, and event handling while building your own playable game. Walk away with practical experience and the confidence to develop more complex games!',
+    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
+  },
+  {
+    name: 'Esports',
+    description: 'Gear up for the ultimate test of strategy, reflexes, and teamwork in our Esports Event! Experience the thrill of competitive gaming as you face off against fellow gamers in popular titles. Whether you\'re a casual player or a hardcore competitor, this event is designed to foster camaraderie, sharpen skills, and fuel your passion for gaming. Spectators are welcome too—cheer on your friends and enjoy the electrifying atmosphere of high-stakes competition!',
+    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
+  }
 ];
 
 export const EventsSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('technical');
-
-  const handleRegister = (eventName: string) => {
-    // Open a registration form (placeholder)
-    const registrationUrl = `https://forms.google.com/register?event=${encodeURIComponent(eventName)}`;
-    window.open(registrationUrl, '_blank');
+  const handleRegister = (event: Event) => {
+    if (event.registrationLink) {
+      window.open(event.registrationLink, '_blank');
+    }
   };
 
   return (
@@ -70,97 +59,35 @@ export const EventsSection: React.FC = () => {
           </p>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full sticky top-16 sm:top-20 z-20 bg-slate-900 pt-2 pb-4 -mt-2">
-          <TabsList className="grid w-full grid-cols-2 bg-slate-800 border border-slate-700">
-            <TabsTrigger 
-              value="technical" 
-              className="font-rajdhani text-sm sm:text-base md:text-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-600 data-[state=active]:text-white py-2 sm:py-3"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {events.map((event, index) => (
+            <Card 
+              key={event.name} 
+              className="glass-card border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-[1.02] fade-in stagger-animation group h-full flex flex-col"
+              style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
             >
-              <span className="truncate">Technical ({technicalEvents.length})</span>
-            </TabsTrigger>
-            <TabsTrigger 
-              value="non-technical"
-              className="font-rajdhani text-sm sm:text-base md:text-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-600 data-[state=active]:text-white py-2 sm:py-3"
-            >
-              <span className="truncate">Non-Tech ({nonTechnicalEvents.length})</span>
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="technical" className="mt-6 sm:mt-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {technicalEvents.map((event, index) => (
-                <Card 
-                  key={event.name} 
-                  className="glass-card border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-[1.02] fade-in stagger-animation group h-full flex flex-col"
-                  style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
+              <CardHeader className="flex-1">
+                <CardTitle className="text-lg sm:text-xl font-bold font-rajdhani text-white group-hover:text-cyan-300 transition-colors line-clamp-2">
+                  {event.name}
+                </CardTitle>
+                <CardDescription className="text-sm sm:text-base text-gray-300 group-hover:text-gray-100 transition-colors mt-2 whitespace-pre-line">
+                  {event.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="mt-4 pt-0">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="w-full text-sm sm:text-base text-cyan-400 border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 group-hover:border-cyan-300 transition-colors py-2 sm:py-3"
+                  onClick={() => handleRegister(event)}
                 >
-                  <CardHeader className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors flex-shrink-0">
-                        {event.icon}
-                      </div>
-                      <CardTitle className="text-lg sm:text-xl font-bold font-rajdhani text-white group-hover:text-cyan-300 transition-colors line-clamp-2">
-                        {event.name}
-                      </CardTitle>
-                    </div>
-                    <CardDescription className="text-sm sm:text-base text-gray-300 group-hover:text-gray-100 transition-colors line-clamp-3">
-                      {event.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="mt-4 pt-0">
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      className="w-full text-sm sm:text-base text-cyan-400 border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 group-hover:border-cyan-300 transition-colors py-2 sm:py-3"
-                      onClick={() => handleRegister(event.name)}
-                    >
-                      Register Now
-                      <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="non-technical" className="mt-6 sm:mt-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {nonTechnicalEvents.map((event, index) => (
-                <Card 
-                  key={event.name} 
-                  className="glass-card border-pink-500/20 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-[1.02] fade-in stagger-animation group h-full flex flex-col"
-                  style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
-                >
-                  <CardHeader className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0">
-                        {event.icon}
-                      </div>
-                      <Badge variant="outline" className="border-purple-400/50 text-purple-400">
-                        Non-Technical
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl font-rajdhani text-white group-hover:text-purple-300 transition-colors">
-                      {event.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-300 mb-4 font-rajdhani">
-                      {event.description}
-                    </CardDescription>
-                    <Button 
-                      onClick={() => handleRegister(event.name)}
-                      className="w-full bg-gradient-to-r from-purple-600 to-pink-700 hover:from-purple-700 hover:to-pink-800 font-rajdhani"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Register Now
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+                  Register Now
+                  <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
