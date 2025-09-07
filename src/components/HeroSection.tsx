@@ -13,14 +13,14 @@ export const HeroSection: React.FC = () => {
       {/* Logos - Top Corners */}
       <div className="absolute top-8 left-8 z-20 fade-in">
         <img 
-          src="/src/components/logo.png" 
+          src="/logo.png" 
           alt="Logo" 
           className="h-24 w-auto"
         />
       </div>
       <div className="absolute top-8 right-8 z-20 fade-in">
         <img 
-          src="/src/components/AU.png" 
+          src="/AU.png" 
           alt="Aurora University" 
           className="h-24 w-auto"
         />
