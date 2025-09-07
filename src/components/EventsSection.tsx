@@ -86,37 +86,36 @@ export const EventsSection: React.FC = () => {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="technical">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <TabsContent value="technical" className="mt-6 sm:mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {technicalEvents.map((event, index) => (
                 <Card 
                   key={event.name} 
-                  className="glass-card border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 fade-in stagger-animation group"
+                  className="glass-card border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-[1.02] fade-in stagger-animation group h-full flex flex-col"
                   style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
                 >
-                  <CardHeader>
+                  <CardHeader className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors flex-shrink-0">
                         {event.icon}
                       </div>
-                      <Badge variant="outline" className="border-cyan-400/50 text-cyan-400">
-                        Technical
-                      </Badge>
+                      <CardTitle className="text-lg sm:text-xl font-bold font-rajdhani text-white group-hover:text-cyan-300 transition-colors line-clamp-2">
+                        {event.name}
+                      </CardTitle>
                     </div>
-                    <CardTitle className="text-xl font-rajdhani text-white group-hover:text-cyan-300 transition-colors">
-                      {event.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-300 mb-4 font-rajdhani">
+                    <CardDescription className="text-sm sm:text-base text-gray-300 group-hover:text-gray-100 transition-colors line-clamp-3">
                       {event.description}
                     </CardDescription>
+                  </CardHeader>
+                  <CardContent className="mt-4 pt-0">
                     <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="w-full text-sm sm:text-base text-cyan-400 border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 group-hover:border-cyan-300 transition-colors py-2 sm:py-3"
                       onClick={() => handleRegister(event.name)}
-                      className="w-full bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 font-rajdhani"
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
                       Register Now
+                      <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -124,17 +123,17 @@ export const EventsSection: React.FC = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="non-technical">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <TabsContent value="non-technical" className="mt-6 sm:mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {nonTechnicalEvents.map((event, index) => (
                 <Card 
                   key={event.name} 
-                  className="glass-card border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105 fade-in stagger-animation group"
+                  className="glass-card border-pink-500/20 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-[1.02] fade-in stagger-animation group h-full flex flex-col"
                   style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
                 >
-                  <CardHeader>
+                  <CardHeader className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
+                      <div className="text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0">
                         {event.icon}
                       </div>
                       <Badge variant="outline" className="border-purple-400/50 text-purple-400">
