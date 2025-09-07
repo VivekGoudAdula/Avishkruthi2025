@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Eye } from 'lucide-react';
 const codeverseLogo = new URL('../../public/codeverse.png', import.meta.url).href;
 const algorandLogo = new URL('../../public/algorand.png', import.meta.url).href;
 const cybercrytixLogo = new URL('../../public/cybercrytix.jpg', import.meta.url).href;
