@@ -1,6 +1,14 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, Brain, Settings, Code, Palette, Gamepad2, Coins, Eye } from 'lucide-react';
+import { Eye } from 'lucide-react';
+const codeverseLogo = new URL('../../public/codeverse.png', import.meta.url).href;
+const algorandLogo = new URL('../../public/algorand.png', import.meta.url).href;
+const cybercrytixLogo = new URL('../../public/cybercrytix.jpg', import.meta.url).href;
+const aiInnovatorsLogo = new URL('../../public/aiinnovators.png', import.meta.url).href;
+const creativeverseLogo = new URL('../../public/creativeverse.png', import.meta.url).href;
+const gameDevLogo = new URL('../../public/gamedev.png', import.meta.url).href;
+const systemDesignLogo = new URL('../../public/systemdesign.png', import.meta.url).href;
+const mirageLogo = new URL('../../public/mirae.png', import.meta.url).href;
 
 interface Club {
   name: string;
@@ -9,14 +17,14 @@ interface Club {
 }
 
 const clubs: Club[] = [
-  { name: 'Cyber Crytix Club', icon: <Shield className="w-12 h-12" />, color: 'from-red-500 to-orange-600' },
-  { name: 'AI Innovators Club', icon: <Brain className="w-12 h-12" />, color: 'from-blue-500 to-cyan-600' },
-  { name: 'System Design Club', icon: <Settings className="w-12 h-12" />, color: 'from-green-500 to-teal-600' },
-  { name: 'CodeVerse Club', icon: <Code className="w-12 h-12" />, color: 'from-purple-500 to-indigo-600' },
-  { name: 'Creativerse Club', icon: <Palette className="w-12 h-12" />, color: 'from-pink-500 to-rose-600' },
-  { name: 'Game Development Club', icon: <Gamepad2 className="w-12 h-12" />, color: 'from-yellow-500 to-orange-600' },
-  { name: 'Algorand Club', icon: <Coins className="w-12 h-12" />, color: 'from-emerald-500 to-green-600' },
-  { name: 'Mirage', icon: <Eye className="w-12 h-12" />, color: 'from-violet-500 to-purple-600' }
+  { name: 'Cyber Crytix Club', icon: <div className="flex items-center justify-center h-16"><img src={cybercrytixLogo} alt="Cyber Crytix" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-red-500 to-orange-600' },
+  { name: 'AI Innovators Club', icon: <div className="flex items-center justify-center h-16"><img src={aiInnovatorsLogo} alt="AI Innovators" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-blue-500 to-cyan-600' },
+  { name: 'CodeVerse Club', icon: <div className="flex items-center justify-center h-16"><img src={codeverseLogo} alt="CodeVerse" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-purple-500 to-indigo-600' },
+  { name: 'Algorand Club', icon: <div className="flex items-center justify-center h-16"><img src={algorandLogo} alt="Algorand" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-emerald-500 to-green-600' },
+  { name: 'System Design Club', icon: <div className="flex items-center justify-center h-16"><img src={systemDesignLogo} alt="System Design" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-green-500 to-teal-600' },
+  { name: 'Creativerse Club', icon: <div className="flex items-center justify-center h-16"><img src={creativeverseLogo} alt="Creativerse" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-pink-500 to-rose-600' },
+  { name: 'Game Development Club', icon: <div className="flex items-center justify-center h-16"><img src={gameDevLogo} alt="Game Development" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-yellow-500 to-orange-600' },
+  { name: 'Mirae', icon: <div className="flex items-center justify-center h-16"><img src={mirageLogo} alt="Mirage" className="w-20 h-20 rounded-full object-cover" /></div>, color: 'from-violet-500 to-purple-600' }
 ];
 
 export const ClubsSection: React.FC = () => {
