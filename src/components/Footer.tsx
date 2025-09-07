@@ -1,7 +1,6 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
-import { Button } from '@/components/ui/button';
-import { Github, Twitter, Linkedin, Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
