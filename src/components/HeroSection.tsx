@@ -47,7 +47,7 @@ export const HeroSection: React.FC = () => {
         {/* Tagline */}
         <div className="fade-in mb-12 stagger-animation" style={{ '--delay': '0.2s' } as React.CSSProperties}>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-rajdhani text-gray-300 mb-4 sm:mb-6 px-2">
-            A National Level Technical Fest
+            A National Level Techno Management Fest
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-xl sm:text-2xl font-rajdhani">
             <div className="flex items-center text-cyan-400">

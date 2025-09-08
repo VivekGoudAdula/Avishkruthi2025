@@ -130,15 +130,6 @@ const analyticalEvents: Event[] = [
 ];
 
 // Combine all events into a single array
-const allEvents = [
-  ...codingEvents,
-  ...blockchainEvents,
-  ...businessEvents,
-  ...creativeEvents,
-  ...gamingEvents,
-  ...analyticalEvents
-];
-
 interface EventCategory {
   name: string;
   events: Event[];
