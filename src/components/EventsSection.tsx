@@ -139,7 +139,6 @@ const allEvents = [
   ...analyticalEvents
 ];
 
-
 interface EventCategory {
   name: string;
   events: Event[];
