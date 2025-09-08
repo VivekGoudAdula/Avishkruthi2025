@@ -139,8 +139,6 @@ const allEvents = [
   ...analyticalEvents
 ];
 
-// For backward compatibility
-const events = allEvents;
 
 interface EventCategory {
   name: string;
