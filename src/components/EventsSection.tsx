@@ -18,12 +18,12 @@ const codingEvents: Event[] = [
     registrationLink: 'https://forms.gle/Gbm4Hh4Jdr5HKee3A'
   },
   {
-    name: 'Code Arena',
+    name: 'Code Battle',
     description: 'Unleash your creativity and coding prowess at our Mini Hackathon! Whether you\'re a beginner or a seasoned developer, this event is the perfect platform to collaborate, innovate, and build prototypes in a competitive yet supportive environment. Form teams, brainstorm unique game ideas, and bring them to life using cutting-edge tools and technologies. Stand a chance to win exciting prizes and gain recognition from industry experts. Push the boundaries of imagination, and let your code tell a story!',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
   },
   {
-    name: 'Code Battle',
+    name: 'Code Arena',
     description: 'Dive into the world of game development with our hands-on Python Game Development Workshop using Pygame! Learn the fundamentals of creating a simple 2D game from scratch. This event is ideal for beginners and enthusiasts eager to explore programming, animation, and interactivity. Get guided through game mechanics, graphics rendering, and event handling while building your own playable game. Walk away with practical experience and the confidence to develop more complex games!',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
   },
@@ -50,6 +50,11 @@ const blockchainEvents: Event[] = [
 
 // Business & Entrepreneurship
 const businessEvents: Event[] = [
+  {
+    name: 'Echo Ideas (Ideathon)',
+    description: 'Echo Ideas is hosting a team-based Idea Pitching Event to spark creativity and innovation among students. Teams of 3 will get 5 minutes to pitch their ideas from any domain—tech, business, environment, education, or social impact. The event offers mentorship, networking opportunities, and exciting prizes, while helping students build confidence, presentation skills, and a spirit of teamwork.',
+    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdPt643PNTwpVQ1K1mMzgC0bpVgqDKuZ2mOY1vLqFKqDWusoQ/viewform?usp=sharing&ouid=112729422460956689523'
+  },
   {
     name: 'AU Shark Tank',
     description: 'Do you have a million-dollar idea? Step into the tank and pitch your innovative business concept to our panel of "sharks"! This is your opportunity to develop and present a real-world solution, product, or service. Your idea doesn\'t need to be technical—any creative, money-making idea is welcome. You\'ll need to showcase your creativity, business acumen, and presentation skills to convince the judges that your idea is worth their investment. Get ready to negotiate, persuade, and maybe even secure a deal!',
