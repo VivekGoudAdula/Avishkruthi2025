@@ -26,18 +26,23 @@ const codingEvents: Event[] = [
     name: 'Code Battle',
     description: 'Dive into the world of game development with our hands-on Python Game Development Workshop using Pygame! Learn the fundamentals of creating a simple 2D game from scratch. This event is ideal for beginners and enthusiasts eager to explore programming, animation, and interactivity. Get guided through game mechanics, graphics rendering, and event handling while building your own playable game. Walk away with practical experience and the confidence to develop more complex games!',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
-  }
+  },
+  {
+    name: 'Datathon',
+    description: 'A data-driven problem-solving competition where participants analyze a provided dataset using AI, machine learning, or statistical techniques. Teams/individuals will develop models and present their findings to a panel of judges, focusing on creativity and technical skills.',
+    registrationLink: 'https://forms.gle/7ckF4iR5nTtBGEm36'
+  },
 ];
 
 // Blockchain & Technology
 const blockchainEvents: Event[] = [
   {
-    name: 'AlgoNauts – Blockchain Quiz / Challenge',
+    name: 'Algo Nauts',
     description: 'AlgoNauts is an exciting blockchain quiz designed to test your knowledge, speed, and presence of mind in the ever-evolving world of Algorand and decentralized technologies. Just like astronauts exploring space, participants here become AlgoNauts, navigating through challenging rounds of questions and rapid-fire challenges.',
     registrationLink: 'https://forms.gle/Zh5aLui2bu4xgbvS8'
   },
   {
-    name: 'AlgoVision 2025 – Project Expo',
+    name: 'AlgoVision',
     description: 'AlgoVision 2025 is your stage to showcase creativity, innovation, and problem-solving through blockchain technology. This project expo invites students and developers to present their blockchain-based ideas, prototypes, and solutions built on Algorand.',
     registrationLink: 'https://forms.gle/knTGKPA5JTRkwvwH7'
   }
@@ -84,7 +89,17 @@ const creativeEvents: Event[] = [
 // Gaming & Entertainment
 const gamingEvents: Event[] = [
   {
-    name: 'Esports',
+    name: 'Battlegrounds Mobile India (BGMI) Tournament',
+    description: 'An adrenaline-fueled, high-stakes competition where teams strategize, loot, and engage in intense combat to be the last one standing. It\'s a true test of teamwork, sharp reflexes, and tactical prowess in a classic battle royale setting.',
+    registrationLink: 'https://forms.gle/7ckF4iR5nTtBGEm36'
+  },
+  {
+    name: 'Free Fire Tournament',
+    description: 'Gear up for the ultimate survival challenge in this fast-paced battle royale event. Teams will test their sharpshooting and tactical skills in an intense quest for survival where only the last team standing can claim victory.',
+    registrationLink: 'https://forms.gle/5ttBJ8EiYiv5KgoFA'
+  },
+  {
+    name: 'E-Sports - BGMI & FREE-FIRE',
     description: 'Gear up for the ultimate test of strategy, reflexes, and teamwork in our Esports Event! Experience the thrill of competitive gaming as you face off against fellow gamers in popular titles. Whether you\'re a casual player or a hardcore competitor, this event is designed to foster camaraderie, sharpen skills, and fuel your passion for gaming. Spectators are welcome too—cheer on your friends and enjoy the electrifying atmosphere of high-stakes competition!',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
   }
@@ -92,6 +107,11 @@ const gamingEvents: Event[] = [
 
 // Analytical & Problem Solving
 const analyticalEvents: Event[] = [
+  {
+    name: 'CTF: Zero-Day Dash',
+    description: 'A competitive cybersecurity challenge where participants find "flags" hidden within various challenges. It tests your skills in ethical hacking, problem-solving, and logical reasoning to find hidden flags related to web security, cryptography, and forensics.',
+    registrationLink: 'https://forms.gle/5ttBJ8EiYiv5KgoFA'
+  },
   {
     name: 'Case Crackdown',
     description: 'Battle of analytical minds! Teams will analyze real-world case studies, identify problems, and present impactful solutions under time pressure. A true test of problem-solving, critical thinking, and presentation skills.',

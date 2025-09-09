@@ -10,11 +10,16 @@ interface Coordinator {
 }
 
 const coordinators: Coordinator[] = [
+  // Faculty Coordinators
   { name: 'Mr. K. Ravikanth', role: 'Faculty', phone: '9100000112' },
-  { name: 'Dr. S. Mahesh', role: 'Faculty', phone: '9100000115' },
+  { name: 'Mr. R.K. Raman', role: 'Faculty', phone: '9550147310' },
+  { name: 'Dr. Shameem Begum', role: 'Faculty', phone: '9100000141' },
+  
+  // Student Coordinators
   { name: 'D. Sudheendra', role: 'Student', phone: '7780572634' },
   { name: 'G. Dhruvanand', role: 'Student', phone: '8106749991' },
-  { name: 'S. Meghana', role: 'Student', phone: '6302171848' }
+  { name: 'S. Meghana', role: 'Student', phone: '6302171848' },
+  { name: 'J. Kiran', role: 'Student', phone: '9347371085' }
 ];
 
 export const CoordinatorsSection: React.FC = () => {

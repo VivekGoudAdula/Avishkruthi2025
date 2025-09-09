@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Sparkles } from 'lucide-react';
+import Galaxy from './Galaxy';
 
 export const HeroSection: React.FC = () => {
   const scrollToEvents = () => {
@@ -9,7 +10,22 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center particle-bg tech-grid overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
+      {/* Galaxy Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <Galaxy 
+          density={0.8}
+          glowIntensity={0.3}
+          saturation={0.6}
+          hueShift={240}
+          mouseRepulsion={true}
+          mouseInteraction={true}
+          twinkleIntensity={0.3}
+          rotationSpeed={0.05}
+          transparent={true}
+        />
+      </div>
+
       {/* Logos - Top Corners */}
       <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-20 fade-in">
         <img 
@@ -26,13 +42,6 @@ export const HeroSection: React.FC = () => {
         />
       </div>
 
-      {/* Animated Background Elements - Simplified for mobile */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-cyan-500/10 rounded-full blur-xl sm:blur-2xl md:blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-purple-500/10 rounded-full blur-xl sm:blur-2xl md:blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-green-500/10 rounded-full blur-xl sm:blur-2xl md:blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
-
       <div className="relative z-10 text-center w-full max-w-6xl mx-auto mt-12 sm:mt-16 md:mt-20 px-2 sm:px-4">
         {/* Main Title */}
         <div className="fade-in mb-6 sm:mb-8">
@@ -47,12 +56,12 @@ export const HeroSection: React.FC = () => {
         {/* Tagline */}
         <div className="fade-in mb-12 stagger-animation" style={{ '--delay': '0.2s' } as React.CSSProperties}>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-rajdhani text-gray-300 mb-4 sm:mb-6 px-2">
-            A National Level Techno Management Fest
+            A National Level Technical and Management Fest
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-xl sm:text-2xl font-rajdhani">
             <div className="flex items-center text-cyan-400">
               <Calendar className="mr-3 h-6 w-6 sm:h-7 sm:w-7" />
-              <span>September 15-19, 2025</span>
+              <span>September 15<sup>th</sup> - 19<sup>th</sup>, 2025</span>
             </div>
             <div className="flex items-center text-pink-400">
               <MapPin className="mr-3 h-6 w-6 sm:h-7 sm:w-7 flex-shrink-0" />
