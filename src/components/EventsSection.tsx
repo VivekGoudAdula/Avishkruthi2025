@@ -13,7 +13,7 @@ interface Event {
 // Coding & Development
 const codingEvents: Event[] = [
   { 
-    name: 'Build-a-thon', 
+    name: 'BUILD-A-THON', 
     description: 'A Web Development hackathon where teams compete to design and build functional, creative, and user-friendly web applications around real-world themes. Participants will code using modern web technologies, showcase their projects, and present live demos to judges. Bonus points for innovation, UI/UX, and responsiveness.',
     registrationLink: 'https://forms.gle/Gbm4Hh4Jdr5HKee3A'
   },
