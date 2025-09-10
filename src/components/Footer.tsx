@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
                 AVISHKRUTI 2025
               </h3>
               <p className="text-gray-300 font-rajdhani text-lg">
-                A National Level Technical Fest
+                A National Level Technical and Management Fest
               </p>
             </div>
             <div className="space-y-3">
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-gray-400 font-rajdhani text-center md:text-left">
-            © {currentYear} Aurora University - Avishkruti Technical Fest. All rights reserved.
+            © {currentYear} Aurora University - Avishkruti - A Technical and Management Fest. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-gray-400 font-rajdhani text-sm">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
