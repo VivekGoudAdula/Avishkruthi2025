@@ -15,7 +15,7 @@ const codingEvents: Event[] = [
   { 
     name: 'BUILD-A-THON', 
     description: 'A Web Development hackathon where teams compete to design and build functional, creative, and user-friendly web applications around real-world themes. Participants will code using modern web technologies, showcase their projects, and present live demos to judges. Bonus points for innovation, UI/UX, and responsiveness.',
-    registrationLink: 'https://forms.gle/Gbm4Hh4Jdr5HKee3A'
+    registrationLink: 'https://codeverseau.pages.dev/events/build-a-thon'
   },
   {
     name: 'Code Battle',
@@ -31,6 +31,11 @@ const codingEvents: Event[] = [
     name: 'Datathon',
     description: 'A data-driven problem-solving competition where participants analyze a provided dataset using AI, machine learning, or statistical techniques. Teams/individuals will develop models and present their findings to a panel of judges, focusing on creativity and technical skills.',
     registrationLink: 'https://forms.gle/7ckF4iR5nTtBGEm36'
+  },
+  {
+    name: 'Dock the Git – Workshop & Competition',
+    description: 'Ever wondered how developers across the globe collaborate seamlessly? Or how apps magically run anywhere without breaking? That\'s Git & Docker in action! In this workshop, we\'ll take you from commits to containers, and then challenge you to show off your skills in a mini-competition. Learn. Build. Compete.',
+    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdsw2wRLHWdHA1oo3xopXy1j4xkxX_0y3-Pt5BZ2ksvN1hKCw/viewform?usp=header'
   },
 ];
 
