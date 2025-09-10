@@ -34,11 +34,11 @@ export const HeroSection: React.FC = () => {
           className="h-12 sm:h-16 md:h-20 w-auto"
         />
       </div>
-      <div className="absolute top-6 sm:top-8 right-6 sm:right-8 z-20 fade-in">
+      <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-20 fade-in">
         <img 
           src="/AU.png" 
           alt="Aurora University" 
-          className="h-16 sm:h-20 md:h-24 w-auto"
+          className="h-12 sm:h-16 md:h-20 w-auto"
         />
       </div>
 

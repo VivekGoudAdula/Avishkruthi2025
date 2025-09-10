@@ -96,17 +96,12 @@ const gamingEvents: Event[] = [
   {
     name: 'Battlegrounds Mobile India (BGMI) Tournament',
     description: 'An adrenaline-fueled, high-stakes competition where teams strategize, loot, and engage in intense combat to be the last one standing. It\'s a true test of teamwork, sharp reflexes, and tactical prowess in a classic battle royale setting.',
-    registrationLink: 'https://forms.gle/7ckF4iR5nTtBGEm36'
+    registrationLink: 'https://forms.gle/6PoPHfuBxXNqLVxB8'
   },
   {
     name: 'Free Fire Tournament',
     description: 'Gear up for the ultimate survival challenge in this fast-paced battle royale event. Teams will test their sharpshooting and tactical skills in an intense quest for survival where only the last team standing can claim victory.',
-    registrationLink: 'https://forms.gle/5ttBJ8EiYiv5KgoFA'
-  },
-  {
-    name: 'E-Sports - BGMI & FREE-FIRE',
-    description: 'Gear up for the ultimate test of strategy, reflexes, and teamwork in our Esports Event! Experience the thrill of competitive gaming as you face off against fellow gamers in popular titles. Whether you\'re a casual player or a hardcore competitor, this event is designed to foster camaraderie, sharpen skills, and fuel your passion for gaming. Spectators are welcome too—cheer on your friends and enjoy the electrifying atmosphere of high-stakes competition!',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
+    registrationLink: 'https://forms.gle/HHH9i7EktTPVs5fD9'
   }
 ];
 
