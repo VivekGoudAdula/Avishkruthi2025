@@ -100,7 +100,7 @@ const creativeEvents: Event[] = [
 const presentationEvents: Event[] = [
   {
     name: 'Poster Presentation',
-    description: 'Showcase your ideas visually! Participants design and present posters that creatively express innovative concepts, research, or solutions in a concise and engaging format.',
+    description: 'Showcase your ideas visually! Participants  present posters that creatively express innovative concepts, research, or solutions in a concise and engaging format.',
     registrationLink: 'https://forms.gle/Bw957Z1gPgfzr3gM6'
   },
   {
