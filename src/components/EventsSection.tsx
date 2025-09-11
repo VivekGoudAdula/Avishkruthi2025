@@ -96,6 +96,25 @@ const creativeEvents: Event[] = [
   }
 ];
 
+// Presentation & Research
+const presentationEvents: Event[] = [
+  {
+    name: 'Poster Presentation',
+    description: 'Showcase your ideas visually! Participants design and present posters that creatively express innovative concepts, research, or solutions in a concise and engaging format.',
+    registrationLink: 'https://forms.gle/Bw957Z1gPgfzr3gM6'
+  },
+  {
+    name: 'Paper Presentation',
+    description: 'Dive deep into research! Present your technical papers on emerging technologies, innovative solutions, or case studies to a panel of judges and peers.',
+    registrationLink: 'https://docs.google.com/forms/d/1DHxgA64qLphXcpXyP9zpvVonLfH3J4O1VNxbNeit2lI/edit'
+  },
+  {
+    name: 'Project Presentation',
+    description: 'Bring your ideas to life! Participants demonstrate their working projects or prototypes, highlighting creativity, problem-solving, and real-world application.',
+    registrationLink: 'https://forms.gle/eeht62WsKsHkDX3E9'
+  }
+];
+
 // Gaming & Entertainment
 const gamingEvents: Event[] = [
   {
@@ -200,6 +219,10 @@ export const EventsSection: React.FC = () => {
     {
       name: 'Creative & Design',
       events: creativeEvents
+    },
+    {
+      name: 'Presentation & Research',
+      events: presentationEvents
     },
     {
       name: 'Gaming & Entertainment',
