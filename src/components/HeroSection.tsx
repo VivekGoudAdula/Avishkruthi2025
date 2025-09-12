@@ -14,15 +14,17 @@ export const HeroSection: React.FC = () => {
       {/* Galaxy Background */}
       <div className="absolute inset-0 w-full h-full">
         <Galaxy 
-          density={0.8}
-          glowIntensity={0.3}
-          saturation={0.6}
+          density={1.2}
+          glowIntensity={0.5}
+          saturation={0.8}
           hueShift={240}
           mouseRepulsion={true}
           mouseInteraction={true}
-          twinkleIntensity={0.3}
-          rotationSpeed={0.05}
+          twinkleIntensity={0.6}
+          rotationSpeed={0.08}
           transparent={true}
+          speed={1.5}
+          repulsionStrength={3}
         />
       </div>
 
