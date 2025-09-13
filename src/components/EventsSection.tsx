@@ -19,12 +19,12 @@ const codingEvents: Event[] = [
   },
   {
     name: 'Code Battle',
-    description: 'Unleash your creativity and coding prowess at our Mini Hackathon! Whether you\'re a beginner or a seasoned developer, this event is the perfect platform to collaborate, innovate, and build prototypes in a competitive yet supportive environment. Form teams, brainstorm unique game ideas, and bring them to life using cutting-edge tools and technologies. Stand a chance to win exciting prizes and gain recognition from industry experts. Push the boundaries of imagination, and let your code tell a story!',
+    description: 'Unleash your creativity and coding prowess at our Mini Hackathon! Whether you\'re a beginner or a seasoned developer, this event is the perfect platform to collaborate, innovate, and build prototypes in a competitive yet supportive environment. Form teams, brainstorm unique game ideas, and bring them to life using cutting-edge tools and technologies. Stand a chance to win exciting prizes and gain recognition from industry experts. Push the boundaries of imagination, and let your code tell a story!\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Pavan Lal - 7093594078</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
   },
   {
     name: 'Code Arena',
-    description: 'Dive into the world of game development with our hands-on Python Game Development Workshop using Pygame! Learn the fundamentals of creating a simple 2D game from scratch. This event is ideal for beginners and enthusiasts eager to explore programming, animation, and interactivity. Get guided through game mechanics, graphics rendering, and event handling while building your own playable game. Walk away with practical experience and the confidence to develop more complex games!',
+    description: 'Dive into the world of game development with our hands-on Python Game Development Workshop using Pygame! Learn the fundamentals of creating a simple 2D game from scratch. This event is ideal for beginners and enthusiasts eager to explore programming, animation, and interactivity. Get guided through game mechanics, graphics rendering, and event handling while building your own playable game. Walk away with practical experience and the confidence to develop more complex games!\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Pavan Lal - 7093594078</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
   },
   {
@@ -34,7 +34,7 @@ const codingEvents: Event[] = [
   },
   {
     name: 'Dock the Git – Workshop & Competition',
-    description: 'Ever wondered how developers across the globe collaborate seamlessly? Or how apps magically run anywhere without breaking? That\'s Git & Docker in action! In this workshop, we\'ll take you from commits to containers, and then challenge you to show off your skills in a mini-competition. Learn. Build. Compete.',
+    description: 'Ever wondered how developers across the globe collaborate seamlessly? Or how apps magically run anywhere without breaking? That\'s Git & Docker in action! In this workshop, we\'ll take you from commits to containers, and then challenge you to show off your skills in a mini-competition. Learn. Build. Compete.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Atharva Sanpurkar</span>\n<span class="text-cyan-300">8074753280</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdsw2wRLHWdHA1oo3xopXy1j4xkxX_0y3-Pt5BZ2ksvN1hKCw/viewform?usp=header'
   },
 ];
@@ -67,17 +67,17 @@ const businessEvents: Event[] = [
   },
   {
     name: 'Venture Verse',
-    description: 'Think like an entrepreneur! Pitch a product/service idea, craft a brand identity, and showcase it with a creative ad concept. Convince the judges with your pitch, wow them with branding, and entertain them with your ad.',
+    description: 'Think like an entrepreneur! Pitch a product/service idea, craft a brand identity, and showcase it with a creative ad concept. Convince the judges with your pitch, wow them with branding, and entertain them with your ad.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>\n<span class="text-cyan-300">Amith - 8332903312</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Money Moves Challenge',
-    description: 'A thrilling financial simulation! Make investment and budgeting decisions under unpredictable scenarios like market crashes and sudden opportunities. Test your logic, risk management, and adaptability.',
+    description: 'A thrilling financial simulation! Make investment and budgeting decisions under unpredictable scenarios like market crashes and sudden opportunities. Test your logic, risk management, and adaptability.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Harith - 7569184064</span>\n<span class="text-cyan-300">Rishi - 8639244022</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Bargain Bench',
-    description: 'The ultimate negotiation battle! Step into the role of buyer, seller, or investor and strike the most favorable deal. Persuasion, strategy, and compromise will crown the best negotiators.',
+    description: 'The ultimate negotiation battle! Step into the role of buyer, seller, or investor and strike the most favorable deal. Persuasion, strategy, and compromise will crown the best negotiators.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Vernica - 6303278872</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   }
 ];
@@ -138,37 +138,37 @@ const analyticalEvents: Event[] = [
   },
   {
     name: 'Case Crackdown',
-    description: 'Battle of analytical minds! Teams will analyze real-world case studies, identify problems, and present impactful solutions under time pressure. A true test of problem-solving, critical thinking, and presentation skills.',
+    description: 'Battle of analytical minds! Teams will analyze real-world case studies, identify problems, and present impactful solutions under time pressure. A true test of problem-solving, critical thinking, and presentation skills.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Biz Whiz Quiz',
-    description: 'The ultimate business quiz! From taglines and logos to jingles and entrepreneur trivia—test your knowledge, reflexes, and business acumen in this fast-paced, exciting quiz showdown.',
+    description: 'The ultimate business quiz! From taglines and logos to jingles and entrepreneur trivia—test your knowledge, reflexes, and business acumen in this fast-paced, exciting quiz showdown.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'HR Face Off',
-    description: 'Step into the shoes of HR leaders! Teams first participate in a team-building activity, then roleplay real workplace scenarios to test communication, negotiation, and leadership skills.',
+    description: 'Step into the shoes of HR leaders! Teams first participate in a team-building activity, then roleplay real workplace scenarios to test communication, negotiation, and leadership skills.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Vrishank - 9490056510</span>\n<span class="text-cyan-300">Srikanth - 9014438643</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Sell It in Seconds',
-    description: 'Got the gift of gab? Convince the crowd by selling random everyday items with quick, creative sales pitches. The most persuasive participant with maximum "sales" wins!',
+    description: 'Got the gift of gab? Convince the crowd by selling random everyday items with quick, creative sales pitches. The most persuasive participant with maximum "sales" wins!\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Harith - 7569184064</span>\n<span class="text-cyan-300">Nikith - 9182146707</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Eagle Eye',
-    description: 'Sharpen your observation skills! Spot errors, hidden details, and patterns in images, videos, and clues against the clock. Accuracy and speed decide who has the sharpest eyes.',
+    description: 'Sharpen your observation skills! Spot errors, hidden details, and patterns in images, videos, and clues against the clock. Accuracy and speed decide who has the sharpest eyes.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Himasagar - 8341670317</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'War of Words',
-    description: 'A high-stakes crisis simulation! Teams face unexpected scenarios like PR disasters or supply chain failures and must present quick, actionable strategies to minimize damage.',
+    description: 'A high-stakes crisis simulation! Teams face unexpected scenarios like PR disasters or supply chain failures and must present quick, actionable strategies to minimize damage.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>\n<span class="text-cyan-300">Yashwanth - 7702477424</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Strategy Masters',
-    description: 'Design bold and innovative strategies for business challenges. From launching products to navigating industries, this competition tests creativity, analytical skills, and strategic thinking.',
+    description: 'Design bold and innovative strategies for business challenges. From launching products to navigating industries, this competition tests creativity, analytical skills, and strategic thinking.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Vernica - 6303278872</span>',
     registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   }
 ];
