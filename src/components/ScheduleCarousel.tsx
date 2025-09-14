@@ -2,13 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-// Preload images function
-const preloadImages = (images: string[]) => {
-  images.forEach(src => {
-    const img = new Image();
-    img.src = src;
-  });
-};
 
 const ScheduleCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
