@@ -3,20 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-// Event data type
-type EventData = {
-  title: string;
-  date: string;
-  description: string;
-  rules: string[];
-  rewards: {
-    emoji: string;
-    title: string;
-    description: string;
-  }[];
-  registrationLink: string;
-  participation: string;
-};
+import { EventData } from '@/types/event';
 
 // Event data mapping
 const eventData: EventData = {
@@ -27,30 +14,28 @@ const eventData: EventData = {
   description: 'AU Shark Tank is an activity where participants present their business or startup ideas in front of judges. They will act like entrepreneurs who pitch their idea, product, or service in a simple and clear way. The aim is to check creativity, problem-solving, and presentation skills.',
   participation: 'Group and Individual can participate – Group size: Minimum 2, Maximum 4',
   rules: [
-    'Each team/individual gets limited time to pitch (decided by organizers).',
-    'Ideas must be original (no direct copying).',
-    'Use of slides, props, or demos is allowed.',
-    'Every member of the group should take part in the pitch.',
-    'Judges\' decision is final.'
-  ],
-  rewards: [
     {
-      emoji: '🏆',
-      title: 'Winner',
-      description: 'Certificates'
-    },
-    {
-      emoji: '🥈',
-      title: 'Runner-up',
-      description: 'Certificates'
-    },
-    {
-      emoji: '🎖',
-      title: 'Participation',
-      description: 'Certificates'
+      title: 'General Rules',
+      items: [
+        'Each team/individual gets limited time to pitch (decided by organizers).',
+        'Ideas must be original (no direct copying).',
+        'Use of slides, props, or demos is allowed.',
+        'Every member of the group should take part in the pitch.',
+        'Judges\' decision is final.'
+      ]
     }
   ],
-  registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdmYjsDb-BlHmS2Ud6jZ0KZdZKQCN1g-zhWgPu8fsMKwq73Iw/viewform?usp=sharing&ouid=118445173454149978455'
+  rewards: [
+    '🏆 Winner: Certificates',
+    '🥈 Runner-up: Certificates',
+    '🎖 Participation: Certificates'
+  ],
+  registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdmYjsDb-BlHmS2Ud6jZ0KZdZKQCN1g-zhWgPu8fsMKwq73Iw/viewform?usp=sharing&ouid=118445173454149978455',
+  contact: {
+    name: 'Event Coordinator',
+    number: '+91 XXXXXXXXXX'
+  },
+  registrationFee: '₹100 per participant'
 };
 
 const AUSharkTankPage: React.FC = () => {

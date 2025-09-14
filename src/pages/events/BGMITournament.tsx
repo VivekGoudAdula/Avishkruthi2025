@@ -3,25 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-// Event data type
-type EventData = {
-  title: string;
-  date: string;
-  venue: string;
-  timings: string;
-  description: string;
-  rules: {
-    title: string;
-    items: string[];
-  }[];
-  rewards: string[];
-  registrationLink: string;
-  contact: {
-    name: string;
-    number: string;
-  };
-  registrationFee: string;
-};
+import { EventData } from '@/types/event';
 
 // Event data
 const eventData: EventData = {
@@ -30,7 +12,7 @@ const eventData: EventData = {
   venue: 'Aurora University, Room No: 306, 314',
   timings: '09:30 AM – 04:30 PM',
   description: 'A thrilling BGMI squad-format tournament where 4-player teams battle for glory. Strategy, teamwork, and reflexes will determine the ultimate champions.',
-//   registrationFee: 'Free Entry',
+  registrationFee: ' ',
   
   rules: [
     {
@@ -41,32 +23,30 @@ const eventData: EventData = {
         'Strictly no hacks, macros, or unfair tools (except GFX Tool)',
         'In-game voice chat must be used. No external communication apps once match starts',
         'Connectivity issues are participants\' responsibility',
-        'Matches follow point system: placement + kill points',
         'Late entries not allowed; be ready 15 minutes before scheduled time',
         'Abusive behavior, bug exploits, or match-fixing will result in immediate disqualification',
         'Organizers\' decision is final in all matters'
       ]
     },
-    // {
-    //   title: 'Match Format',
-    //   items: [
-    //     'Classic Squad Mode (TPP)',
-    //     'Erangel, Miramar, and Sanhok maps',
-    //     'Custom Room with password protection',
-    //     'Multiple qualifying rounds leading to finals',
-    //     'Point system: 1st (15), 2nd (12), 3rd (10), 4th-5th (8), 6th-10th (5), 11th-16th (3), 17th-25th (1)',
-    //     'Each kill: 1 point'
-    //   ]
-    // }
+    {
+      title: 'Match Format',
+      items: [
+        'Classic Squad Mode (TPP)',
+        'Erangel, Miramar, and Sanhok maps',
+        'Custom Room with password protection',
+        'Multiple qualifying rounds leading to finals',
+        'Point system: 1st (15), 2nd (12), 3rd (10), 4th-5th (8), 6th-10th (5), 11th-16th (3), 17th-25th (1)',
+        'Each kill: 1 point'
+      ]
+    }
   ],
-  
   rewards: [
-    'Cash Prize for the Winning Team',
-    'Certificates of Participation for all participants',
+    '🏆 1st Place: Cash Prize + Certificates',
+    '🥈 2nd Place: Gaming Accessories + Certificates',
+    '🥉 3rd Place: In-game Currency + Certificates',
+    '🎖 Participation Certificates for all participants'
   ],
-  
   registrationLink: 'https://forms.gle/hC6ALVFCRkME49rw6',
-  
   contact: {
     name: 'Ganesh',
     number: '7842329947'

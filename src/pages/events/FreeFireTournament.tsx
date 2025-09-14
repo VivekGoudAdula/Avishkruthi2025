@@ -3,25 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-// Event data type
-type EventData = {
-  title: string;
-  date: string;
-  venue: string;
-  timings: string;
-  description: string;
-  rules: {
-    title: string;
-    items: string[];
-  }[];
-  rewards: string[];
-  registrationLink: string;
-  contact: {
-    name: string;
-    number: string;
-  };
-  registrationFee: string;
-};
+import { EventData } from '@/types/event';
 
 // Event data
 const eventData: EventData = {
@@ -30,7 +12,7 @@ const eventData: EventData = {
   venue: 'Aurora University, Room No: 306, 314',
   timings: '10:00 AM – 4:30 PM',
   description: 'A high-energy Free Fire squad-format tournament where 4-player teams compete for the ultimate "Booyah." Strategy, reflexes, and teamwork will decide the champions.',
-//   registrationFee: 'Free Entry',
+  registrationFee: '₹200 per team',
   
   rules: [
     {
@@ -46,28 +28,14 @@ const eventData: EventData = {
         'Organizers\' decision is final in all matters'
       ]
     },
-    // {
-    //   title: 'Match Format',
-    //   items: [
-    //     'Classic Squad Mode (4 players per team)',
-    //     'Bermuda, Purgatory, and Kalahari maps',
-    //     'Custom Room with password protection',
-    //     'Multiple qualifying rounds leading to finals',
-    //     'Point system: 1st (12), 2nd (10), 3rd (8), 4th-5th (6), 6th-10th (4), 11th-15th (2), 16th-20th (1)',
-    //     'Each kill: 1 point',
-    //     'Booyah (1st place) bonus: 3 points'
-    //   ]
-    // }
   ],
-  
   rewards: [
-    'Winner Prize',
-    ' Runner-up Prize',
-    'Certificates of Participation for all participants',
-      ],
-  
+    '🏆 1st Place: Cash Prize + Certificates',
+    '🥈 2nd Place: Gaming Accessories + Certificates',
+    '🥉 3rd Place: In-game Currency + Certificates',
+    '🎖 Participation Certificates for all participants'
+  ],
   registrationLink: 'https://forms.gle/Y1fU1F4LN4tgSpkB9',
-  
   contact: {
     name: 'R. Vaibhava Teja',
     number: '6304153015'
