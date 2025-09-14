@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface Event {
   name: string;
@@ -20,22 +21,22 @@ const codingEvents: Event[] = [
   {
     name: 'Code Battle',
     description: 'Unleash your creativity and coding prowess at our Mini Hackathon! Whether you\'re a beginner or a seasoned developer, this event is the perfect platform to collaborate, innovate, and build prototypes in a competitive yet supportive environment. Form teams, brainstorm unique game ideas, and bring them to life using cutting-edge tools and technologies. Stand a chance to win exciting prizes and gain recognition from industry experts. Push the boundaries of imagination, and let your code tell a story!\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Pavan Lal - 7093594078</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
   },
   {
     name: 'Code Arena',
     description: 'Dive into the world of game development with our hands-on Python Game Development Workshop using Pygame! Learn the fundamentals of creating a simple 2D game from scratch. This event is ideal for beginners and enthusiasts eager to explore programming, animation, and interactivity. Get guided through game mechanics, graphics rendering, and event handling while building your own playable game. Walk away with practical experience and the confidence to develop more complex games!\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Pavan Lal - 7093594078</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeXgviglo2rgB9iyX_G-oSkjmhZql5XtkqihcsXLcHiHa4Jbg/viewform?usp=header'
   },
   {
     name: 'Datathon',
     description: 'A data-driven problem-solving competition where participants analyze a provided dataset using AI, machine learning, or statistical techniques. Teams/individuals will develop models and present their findings to a panel of judges, focusing on creativity and technical skills.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Sampreeth</span>\n<span class="text-cyan-300">9505698747</span>',
-    registrationLink: 'https://forms.gle/7ckF4iR5nTtBGEm36'
   },
   {
-    name: 'Dock the Git – Workshop & Competition',
-    description: 'Ever wondered how developers across the globe collaborate seamlessly? Or how apps magically run anywhere without breaking? That\'s Git & Docker in action! In this workshop, we\'ll take you from commits to containers, and then challenge you to show off your skills in a mini-competition. Learn. Build. Compete.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Atharva Sanpurkar</span>\n<span class="text-cyan-300">8074753280</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdsw2wRLHWdHA1oo3xopXy1j4xkxX_0y3-Pt5BZ2ksvN1hKCw/viewform?usp=header'
+    name: 'Dock the Git – Workshop',
+    description: 'Ever wondered how developers across the globe collaborate seamlessly? Or how apps magically run anywhere without breaking? That\'s Git & Docker in action! In this workshop, we\'ll take you from commits to containers. Learn the fundamentals of version control and containerization that power modern development workflows.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Atharva Sanpurkar</span>\n<span class="text-cyan-300">8074753280</span>',
+  },
+  {
+    name: 'Dock the Git – Competition',
+    description: 'Put your Git and Docker skills to the test in this exciting competition! Show off your expertise in version control and containerization as you compete against peers in a series of challenging tasks. Demonstrate your ability to collaborate, problem-solve, and optimize workflows under time constraints.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Atharva Sanpurkar</span>\n<span class="text-cyan-300">8074753280</span>',
   },
 ];
 
@@ -44,12 +45,10 @@ const blockchainEvents: Event[] = [
   {
     name: 'Algo Nauts',
     description: 'AlgoNauts is an exciting blockchain quiz designed to test your knowledge, speed, and presence of mind in the ever-evolving world of Algorand and decentralized technologies. Just like astronauts exploring space, participants here become AlgoNauts, navigating through challenging rounds of questions and rapid-fire challenges.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">K. Sanvika Lakshmi</span>\n<span class="text-cyan-300">9063564346</span>',
-    registrationLink: 'https://forms.gle/Zh5aLui2bu4xgbvS8'
   },
   {
     name: 'AlgoVision',
     description: 'AlgoVision 2025 is your stage to showcase creativity, innovation, and problem-solving through blockchain technology. This project expo invites students and developers to present their blockchain-based ideas, prototypes, and solutions built on Algorand.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Akhila Krishnan</span>\n<span class="text-cyan-300">9985976547</span>',
-    registrationLink: 'https://forms.gle/knTGKPA5JTRkwvwH7'
   }
 ];
 
@@ -58,41 +57,34 @@ const businessEvents: Event[] = [
   {
     name: 'Echo Ideas (Ideathon)',
     description: 'Echo Ideas is hosting a team-based Idea Pitching Event to spark creativity and innovation among students. Teams of 3 will get 5 minutes to pitch their ideas from any domain—tech, business, environment, education, or social impact. The event offers mentorship, networking opportunities, and exciting prizes, while helping students build confidence, presentation skills, and a spirit of teamwork.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Sreesha Thummalapalli - 9052126897</span>\n<span class="text-cyan-300">Mokshesh Goud - 8499856776</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdPt643PNTwpVQ1K1mMzgC0bpVgqDKuZ2mOY1vLqFKqDWusoQ/viewform?usp=sharing&ouid=112729422460956689523'
   },
   {
     name: 'AU Shark Tank',
     description: 'Do you have a million-dollar idea? Step into the tank and pitch your innovative business concept to our panel of "sharks"! This is your opportunity to develop and present a real-world solution, product, or service. Your idea doesn\'t need to be technical—any creative, money-making idea is welcome. You\'ll need to showcase your creativity, business acumen, and presentation skills to convince the judges that your idea is worth their investment. Get ready to negotiate, persuade, and maybe even secure a deal!\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Dhruva - 8106749991</span>\n<span class="text-cyan-300">Sudheendra - 7780572634</span>',
-    registrationLink: 'https://forms.gle/XQoH14tx8QagKL4Q7'
   },
   {
     name: 'Venture Verse',
     description: 'Think like an entrepreneur! Pitch a product/service idea, craft a brand identity, and showcase it with a creative ad concept. Convince the judges with your pitch, wow them with branding, and entertain them with your ad.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>\n<span class="text-cyan-300">Amith - 8332903312</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Money Moves Challenge',
     description: 'A thrilling financial simulation! Make investment and budgeting decisions under unpredictable scenarios like market crashes and sudden opportunities. Test your logic, risk management, and adaptability.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Harith - 7569184064</span>\n<span class="text-cyan-300">Rishi - 8639244022</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Bargain Bench',
     description: 'The ultimate negotiation battle! Step into the role of buyer, seller, or investor and strike the most favorable deal. Persuasion, strategy, and compromise will crown the best negotiators.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Vernica - 6303278872</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   }
 ];
 
 // Creative & Design
 const creativeEvents: Event[] = [
   {
-    name: 'Meme Making Competition',
+    name: 'Meme Mania',
     description: 'Ready to turn your humor into a masterpiece? Join Creative Verse for a meme-making showdown! This is your chance to show off your wit and creativity by crafting the funniest, most relatable, or most insightful memes. Whether you\'re a seasoned memelord or a total beginner, bring your A-game and get ready to create viral-worthy content. We\'ll provide the themes; you bring the laughs. Bonus points for originality and impeccable comedic timing.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Sudheendra</span>\n<span class="text-cyan-300">7780572634</span>',
-    registrationLink: 'https://forms.gle/XQoH14tx8QagKL4Q7'
   },
   {
     name: 'Creative Clash',
     description: 'Unleash your inner artist! Creative Verse presents a design competition where you\'ll get to flex your creative muscles and bring your vision to life. This event is open to designers of all skill levels. We\'ll give you a theme, and you\'ll have the chance to create stunning visual art, from digital illustrations to graphic designs. Your work will be judged on creativity, skill, and how well you capture the essence of the theme.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Dhruva</span>\n<span class="text-cyan-300">8106749991</span>',
-    registrationLink: 'https://forms.gle/XQoH14tx8QagKL4Q7'
   }
 ];
 
@@ -101,17 +93,14 @@ const presentationEvents: Event[] = [
   {
     name: 'Poster Presentation',
     description: 'Showcase your ideas visually! Participants present posters that creatively express innovative concepts, research, or solutions in a concise and engaging format.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Thanuja Sree</span>\n<span class="text-cyan-300">8639802087</span>',
-    registrationLink: 'https://forms.gle/Bw957Z1gPgfzr3gM6'
   },
   {
     name: 'Paper Presentation',
     description: 'Dive deep into research! Present your technical papers on emerging technologies, innovative solutions, or case studies to a panel of judges and peers.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">K. Snitha Pragna Vaishali</span>\n<span class="text-cyan-300">7793998371</span>',
-    registrationLink: 'https://docs.google.com/forms/d/1DHxgA64qLphXcpXyP9zpvVonLfH3J4O1VNxbNeit2lI/edit'
   },
   {
     name: 'Project Presentation',
     description: 'Bring your ideas to life! Participants demonstrate their working projects or prototypes, highlighting creativity, problem-solving, and real-world application.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Vardhan</span>\n<span class="text-cyan-300">918639050061</span>',
-    registrationLink: 'https://forms.gle/eeht62WsKsHkDX3E9'
   }
 ];
 
@@ -120,12 +109,10 @@ const gamingEvents: Event[] = [
   {
     name: 'Battlegrounds Mobile India (BGMI) Tournament',
     description: 'An adrenaline-fueled, high-stakes competition where teams strategize, loot, and engage in intense combat to be the last one standing. It\'s a true test of teamwork, sharp reflexes, and tactical prowess in a classic battle royale setting.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Ganesh</span>\n<span class="text-cyan-300">7842329947</span>',
-    registrationLink: 'https://forms.gle/6PoPHfuBxXNqLVxB8'
   },
   {
     name: 'Free Fire Tournament',
     description: 'Gear up for the ultimate survival challenge in this fast-paced battle royale event. Teams will test their sharpshooting and tactical skills in an intense quest for survival where only the last team standing can claim victory.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">R. Vaibhava Teja</span>\n<span class="text-cyan-300">6304153015</span>',
-    registrationLink: 'https://forms.gle/HHH9i7EktTPVs5fD9'
   }
 ];
 
@@ -134,42 +121,34 @@ const analyticalEvents: Event[] = [
   {
     name: 'Capture The Flag',
     description: 'A competitive cybersecurity challenge where participants find "flags" hidden within various challenges. It tests your skills in ethical hacking, problem-solving, and logical reasoning to find hidden flags related to web security, cryptography, and forensics.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">T. Vignesh</span>\n<span class="text-cyan-300">7093316784</span>',
-    registrationLink: 'https://forms.gle/5ttBJ8EiYiv5KgoFA'
   },
   {
     name: 'Case Crackdown',
     description: 'Battle of analytical minds! Teams will analyze real-world case studies, identify problems, and present impactful solutions under time pressure. A true test of problem-solving, critical thinking, and presentation skills.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Biz Whiz Quiz',
     description: 'The ultimate business quiz! From taglines and logos to jingles and entrepreneur trivia—test your knowledge, reflexes, and business acumen in this fast-paced, exciting quiz showdown.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'HR Face Off',
     description: 'Step into the shoes of HR leaders! Teams first participate in a team-building activity, then roleplay real workplace scenarios to test communication, negotiation, and leadership skills.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Vrishank - 9490056510</span>\n<span class="text-cyan-300">Srikanth - 9014438643</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Sell It in Seconds',
     description: 'Got the gift of gab? Convince the crowd by selling random everyday items with quick, creative sales pitches. The most persuasive participant with maximum "sales" wins!\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Harith - 7569184064</span>\n<span class="text-cyan-300">Nikith - 9182146707</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Eagle Eye',
     description: 'Sharpen your observation skills! Spot errors, hidden details, and patterns in images, videos, and clues against the clock. Accuracy and speed decide who has the sharpest eyes.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Meghana - 6302171848</span>\n<span class="text-cyan-300">Himasagar - 8341670317</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'War of Words',
     description: 'A high-stakes crisis simulation! Teams face unexpected scenarios like PR disasters or supply chain failures and must present quick, actionable strategies to minimize damage.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Ajay - 9550031685</span>\n<span class="text-cyan-300">Yashwanth - 7702477424</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   },
   {
     name: 'Strategy Masters',
     description: 'Design bold and innovative strategies for business challenges. From launching products to navigating industries, this competition tests creativity, analytical skills, and strategic thinking.\n\n<span class="text-cyan-400 font-medium">Contact Information:</span>\n<span class="text-cyan-300">Vernica - 6303278872</span>',
-    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc6Iyhb3x_qYXrAyKnR8gL1UKT_36Pq3WutPW-VieSxJglb0Q/viewform?usp=header'
   }
 ];
 
@@ -201,6 +180,45 @@ export const EventsSection: React.FC = () => {
     if (event.registrationLink) {
       window.open(event.registrationLink, '_blank');
     }
+  };
+
+  const navigate = useNavigate();
+
+  const handleMoreInfo = (eventName: string) => {
+    // Handle specific event routes
+    const eventRoutes: Record<string, string> = {
+      'Code Battle': 'code-battle',
+      'AU Shark Tank': 'au-shark-tank',
+      'Meme Mania': 'meme-mania',
+      'Creative Clash': 'creative-clash',
+      'Dock the Git – Workshop': 'git-docker-workshop',
+      'Dock the Git – Competition': 'git-docker-competition',
+      'Algo Nauts': 'algonauts',
+      'AlgoVision': 'algovision',
+      'Code Arena': 'code-arena',
+      'Poster Presentation': 'poster-presentation',
+      'Paper Presentation': 'paper-presentation',
+      'Project Presentation': 'project-presentation',
+      'Echo Ideas (Ideathon)': 'echo-ideas',
+      'Datathon': 'datathon',
+      'Battlegrounds Mobile India (BGMI) Tournament': 'bgmi-tournament',
+      'Free Fire Tournament': 'free-fire-tournament',
+      'Capture The Flag': 'zero-day-dash-ctf',
+      'Venture Verse': 'venture-verse',
+      'Case Crackdown': 'case-crackdown',
+      'Biz Whiz Quiz': 'biz-whiz-quiz',
+      'HR Face Off': 'hr-face-off',
+      'Money Moves Challenge': 'money-moves-challenge',
+      'Sell It in Seconds': 'sell-it-in-seconds',
+      'Eagle Eye': 'eagle-eye',
+      'War of Words': 'war-of-words',
+      'Strategy Masters': 'strategy-masters',
+      'Bargain Bench': 'bargain-bench'
+    };
+    
+    // Check if the event has a specific route, otherwise generate a URL-friendly name
+    const route = eventRoutes[eventName] || eventName.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/events/${route}`);
   };
 
   const eventCategories: EventCategory[] = [
@@ -288,15 +306,27 @@ export const EventsSection: React.FC = () => {
                         />
                       </CardHeader>
                       <CardContent className="mt-4 pt-0">
-                        <Button 
-                          variant="outline" 
-                          size="sm"
-                          className="w-full text-sm sm:text-base text-cyan-400 border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 group-hover:border-cyan-300 transition-colors py-2 sm:py-3"
-                          onClick={() => handleRegister(event)}
-                        >
-                          Register Now
-                          <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
-                        </Button>
+                        {['Code Battle', 'AU Shark Tank', 'Meme Mania', 'Creative Clash', 'Dock the Git – Workshop', 'Dock the Git – Competition', 'Algo Nauts', 'Code Arena', 'AlgoVision', 'Poster Presentation', 'Paper Presentation', 'Project Presentation', 'Echo Ideas (Ideathon)', 'Datathon', 'Battlegrounds Mobile India (BGMI) Tournament', 'Free Fire Tournament', 'Capture The Flag', 'Venture Verse', 'Case Crackdown', 'Biz Whiz Quiz', 'HR Face Off', 'Money Moves Challenge', 'Sell It in Seconds', 'Eagle Eye', 'War of Words', 'Strategy Masters', 'Bargain Bench'].includes(event.name) ? (
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            className="w-full text-sm sm:text-base text-cyan-400 border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 group-hover:border-cyan-300 transition-colors py-2 sm:py-3"
+                            onClick={() => handleMoreInfo(event.name)}
+                          >
+                            More Information
+                            <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                          </Button>
+                        ) : event.registrationLink ? (
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            className="w-full text-sm sm:text-base text-cyan-400 border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 group-hover:border-cyan-300 transition-colors py-2 sm:py-3"
+                            onClick={() => handleRegister(event)}
+                          >
+                            Register Now
+                            <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                          </Button>
+                        ) : null}
                       </CardContent>
                     </Card>
                   ))}
