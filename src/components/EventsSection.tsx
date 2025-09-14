@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface Event {
   name: string;
@@ -181,6 +182,7 @@ interface EventCategory {
 }
 
 export const EventsSection: React.FC = () => {
+  const navigate = useNavigate();
   const [expandedCategories, setExpandedCategories] = React.useState<Record<string, boolean>>({
     'Coding & Development': true,
     'Blockchain & Technology': true,
@@ -197,8 +199,10 @@ export const EventsSection: React.FC = () => {
     }));
   };
 
-  const handleRegister = (event: Event) => {
-    if (event.registrationLink) {
+  const handleEventClick = (event: Event) => {
+    if (event.name === 'Dock the Git – Workshop & Competition') {
+      navigate('/events/gitws');
+    } else if (event.registrationLink) {
       window.open(event.registrationLink, '_blank');
     }
   };
@@ -292,10 +296,10 @@ export const EventsSection: React.FC = () => {
                           variant="outline" 
                           size="sm"
                           className="w-full text-sm sm:text-base text-cyan-400 border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 group-hover:border-cyan-300 transition-colors py-2 sm:py-3"
-                          onClick={() => handleRegister(event)}
+                          onClick={() => handleEventClick(event)}
                         >
-                          Register Now
-                          <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                          {event.name === 'Dock the Git – Workshop & Competition' ? 'Know More' : 'Register Now'}
+                          {event.name === 'Dock the Git – Workshop & Competition' ? <ChevronRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" /> : <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />}
                         </Button>
                       </CardContent>
                     </Card>
