@@ -85,33 +85,45 @@ const AUSharkTankPage: React.FC = () => {
 
             <section>
               <h3 className="text-2xl font-semibold mb-3 text-cyan-300">Rules and Guidelines</h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-300">
+              <div className="space-y-4">
                 {eventData.rules.map((rule, index) => (
-                  <li key={index} className="leading-relaxed">
-                    {rule}
-                  </li>
+                  <div key={index}>
+                    <h4 className="font-semibold text-cyan-300 mb-2">{rule.title}</h4>
+                    <ul className="list-disc pl-6 space-y-1 text-gray-300">
+                      {rule.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="leading-relaxed">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </section>
 
             <section>
               <h3 className="text-2xl font-semibold mb-4 text-cyan-300">Rewards</h3>
-              <div className="grid md:grid-cols-3 gap-4">
-                {eventData.rewards.map((reward, index) => (
-                  <div 
-                    key={index}
-                    className="bg-gray-700/50 p-4 rounded-lg border border-cyan-500/30"
-                    style={{
-                      borderColor: index === 0 ? 'rgba(234, 179, 8, 0.3)' : 
-                                 index === 1 ? 'rgba(156, 163, 175, 0.3)' : 
-                                 'rgba(168, 85, 247, 0.3)'
-                    }}
-                  >
-                    <div className="text-2xl mb-2">{reward.emoji}</div>
-                    <h4 className="font-semibold text-cyan-300">{reward.title}</h4>
-                    <p className="text-sm text-gray-300">{reward.description}</p>
-                  </div>
-                ))}
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {eventData.rewards.map((reward, index) => {
+                  // Extract emoji and text from the reward string
+                  const emoji = reward.match(/^[\p{Emoji}]+/u)?.[0] || '🏆';
+                  const text = reward.replace(/^[\p{Emoji}\s]+/u, '');
+                  
+                  return (
+                    <div 
+                      key={index}
+                      className="bg-gray-700/50 p-4 rounded-lg border border-cyan-500/30 flex flex-col items-center text-center"
+                      style={{
+                        borderColor: index === 0 ? 'rgba(234, 179, 8, 0.3)' : 
+                                     index === 1 ? 'rgba(156, 163, 175, 0.3)' : 
+                                     'rgba(168, 85, 247, 0.3)'
+                      }}
+                    >
+                      <div className="text-3xl mb-2">{emoji}</div>
+                      <p className="text-gray-300">{text}</p>
+                    </div>
+                  );
+                })}
               </div>
             </section>
 
